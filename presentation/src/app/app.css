@@ -469,6 +469,36 @@
   background: var(--color-background-dark);
 }
 
+.cta-alerts {
+  background: var(--color-background-dark);
+  padding-top: var(--space-12);
+  padding-bottom: 0;
+}
+
+.alert-card {
+  border-radius: var(--radius-2xl);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.alert-card strong { color: var(--color-text); }
+.alert-card span { color: var(--color-text-secondary); }
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(255, 71, 87, 0.12), rgba(30, 0, 0, 0.6));
+  border-color: rgba(255, 71, 87, 0.35);
+}
+
+.alert-warning {
+  background: linear-gradient(135deg, rgba(255, 179, 0, 0.12), rgba(30, 20, 0, 0.6));
+  border-color: rgba(255, 179, 0, 0.35);
+}
+
 .cta-card {
   background: var(--gradient-neon);
   border: 1px solid rgba(195, 255, 90, 0.2);
