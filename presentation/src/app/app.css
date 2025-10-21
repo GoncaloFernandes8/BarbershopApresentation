@@ -469,36 +469,6 @@
   background: var(--color-background-dark);
 }
 
-.cta-alerts {
-  background: var(--color-background-dark);
-  padding-top: var(--space-12);
-  padding-bottom: 0;
-}
-
-.alert-card {
-  border-radius: var(--radius-2xl);
-  padding: var(--space-4) var(--space-6);
-  margin-bottom: var(--space-4);
-  display: flex;
-  gap: var(--space-2);
-  align-items: center;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
-}
-
-.alert-card strong { color: var(--color-text); }
-.alert-card span { color: var(--color-text-secondary); }
-
-.alert-danger {
-  background: linear-gradient(135deg, rgba(255, 71, 87, 0.12), rgba(30, 0, 0, 0.6));
-  border-color: rgba(255, 71, 87, 0.35);
-}
-
-.alert-warning {
-  background: linear-gradient(135deg, rgba(255, 179, 0, 0.12), rgba(30, 20, 0, 0.6));
-  border-color: rgba(255, 179, 0, 0.35);
-}
-
 .cta-card {
   background: var(--gradient-neon);
   border: 1px solid rgba(195, 255, 90, 0.2);
@@ -513,7 +483,63 @@
 
 .cta-card p {
   font-size: var(--font-size-lg);
+  margin-bottom: var(--space-6);
+}
+
+/* Inline Alerts dentro do CTA */
+.inline-alerts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
   margin-bottom: var(--space-8);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inline-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  text-align: left;
+  border: 1px solid;
+  backdrop-filter: blur(10px);
+}
+
+.inline-alert.alert-danger {
+  background: linear-gradient(135deg, rgba(255, 71, 87, 0.15), rgba(40, 10, 10, 0.7));
+  border-color: rgba(255, 71, 87, 0.4);
+}
+
+.inline-alert.alert-warning {
+  background: linear-gradient(135deg, rgba(255, 179, 0, 0.15), rgba(40, 30, 0, 0.7));
+  border-color: rgba(255, 179, 0, 0.4);
+}
+
+.alert-icon {
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.alert-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.alert-text strong {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.alert-text span {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-relaxed);
 }
 
 .cta-links {

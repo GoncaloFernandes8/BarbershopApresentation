@@ -403,26 +403,30 @@
     </div>
   </section>
 
-  <!-- Alerts above CTA -->
-  <section class="section cta-alerts">
-    <div class="container-narrow">
-      <div class="alert-card alert-danger">
-        <strong>Backoffice em desenvolvimento:</strong>
-        <span>o frontend de administração ainda não está totalmente concluído e pode apresentar erros.</span>
-      </div>
-      <div class="alert-card alert-warning">
-        <strong>Aviso:</strong>
-        <span>ao abrir os frontends, se os dados não carregarem de imediato, o backend pode estar em modo sleep. Aguarde alguns segundos até ficar ativo.</span>
-      </div>
-    </div>
-  </section>
-
   <!-- Links & CTA -->
   <section id="cta" class="section cta">
     <div class="container-narrow">
       <div class="cta-card">
         <h2>Quer Ver o Projeto em Ação?</h2>
         <p>Explore o código-fonte ou teste as aplicações em produção</p>
+        
+        <!-- Alerts inline no cartão -->
+        <div class="inline-alerts">
+          <div class="inline-alert alert-danger">
+            <span class="alert-icon">⚠️</span>
+            <div class="alert-text">
+              <strong>Backoffice em desenvolvimento</strong>
+              <span>O frontend de administração ainda não está totalmente concluído e pode apresentar erros.</span>
+            </div>
+          </div>
+          <div class="inline-alert alert-warning">
+            <span class="alert-icon">💤</span>
+            <div class="alert-text">
+              <strong>Backend em sleep mode</strong>
+              <span>Se os dados não carregarem de imediato, aguarde alguns segundos até o backend ativar.</span>
+            </div>
+          </div>
+        </div>
         
         <div class="cta-links">
           <a href="https://github.com/GoncaloFernandes8/BarbershopAPI" target="_blank" class="cta-link">
