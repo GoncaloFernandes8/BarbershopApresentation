@@ -589,6 +589,199 @@
   font-size: var(--font-size-sm);
 }
 
+/* New CTA Sections */
+.cta-section {
+  margin-top: var(--space-10);
+}
+
+.cta-section:first-of-type {
+  margin-top: var(--space-8);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+  text-align: left;
+}
+
+.title-icon {
+  font-size: var(--font-size-2xl);
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+
+.button-grid.live-demos {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid;
+}
+
+.project-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+/* GitHub Buttons */
+.github-button {
+  background: linear-gradient(135deg, rgba(30, 30, 35, 0.9), rgba(20, 20, 25, 0.9));
+  border-color: rgba(100, 100, 110, 0.3);
+}
+
+.github-button::before {
+  background: linear-gradient(135deg, rgba(195, 255, 90, 0.05), rgba(195, 255, 90, 0.02));
+}
+
+.github-button:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(195, 255, 90, 0.15);
+}
+
+.github-button:hover::before {
+  opacity: 1;
+}
+
+.github-button:hover .button-arrow {
+  transform: translateX(6px);
+  color: var(--color-primary);
+}
+
+/* Live Buttons */
+.live-button {
+  background: linear-gradient(135deg, rgba(195, 255, 90, 0.1), rgba(195, 255, 90, 0.05));
+  border-color: rgba(195, 255, 90, 0.3);
+}
+
+.live-button::before {
+  background: linear-gradient(135deg, rgba(195, 255, 90, 0.15), rgba(195, 255, 90, 0.08));
+}
+
+.live-button:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(195, 255, 90, 0.25);
+}
+
+.live-button:hover::before {
+  opacity: 1;
+}
+
+.live-button:hover .button-badge {
+  background: var(--color-primary);
+  color: var(--color-background);
+  animation: pulse 0.8s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Button Content */
+.button-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.button-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.button-icon {
+  font-size: var(--font-size-2xl);
+  line-height: 1;
+}
+
+.button-header strong {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.button-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-left: calc(var(--font-size-2xl) + var(--space-3));
+}
+
+.button-arrow {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  transition: all var(--transition-base);
+  line-height: 1;
+}
+
+.button-badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(195, 255, 90, 0.2);
+  border: 1px solid rgba(195, 255, 90, 0.4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  transition: all var(--transition-base);
+}
+
+/* Responsive for buttons */
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-grid.live-demos {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-button {
+    padding: var(--space-4) var(--space-5);
+  }
+  
+  .button-header strong {
+    font-size: var(--font-size-base);
+  }
+  
+  .button-subtitle {
+    font-size: var(--font-size-xs);
+  }
+}
+
 /* Footer */
 .footer {
   background: var(--color-background-dark);
