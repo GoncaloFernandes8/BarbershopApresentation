@@ -190,7 +190,8 @@
   color: var(--color-text-muted);
   font-size: var(--font-size-xs);
   animation: fade-up 0.8s ease-out 0.8s both;
-  z-index: 10; /* Garantir que fica acima dos botões */
+  z-index: 100; /* Garantir que fica acima de todos os elementos do hero */
+  pointer-events: none; /* Permitir cliques através do elemento */
 }
 
 .mouse {
