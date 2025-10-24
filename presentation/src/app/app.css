@@ -40,7 +40,6 @@
 
 .hero-content {
   position: relative;
-  z-index: 1;
   text-align: center;
   padding: var(--space-12) var(--space-6);
 }
@@ -190,7 +189,7 @@
   color: var(--color-text-muted);
   font-size: var(--font-size-xs);
   animation: fade-up 0.8s ease-out 0.8s both;
-  z-index: 100; /* Garantir que fica acima de todos os elementos do hero */
+  z-index: 2; /* Acima do background (z-index: 0) e conteúdo (sem z-index) */
   pointer-events: none; /* Permitir cliques através do elemento */
 }
 
