@@ -40,6 +40,7 @@
 
 .hero-content {
   position: relative;
+  z-index: 1;
   text-align: center;
   padding: var(--space-12) var(--space-6);
 }
@@ -175,53 +176,6 @@
 
 .btn-icon {
   font-size: var(--font-size-xl);
-}
-
-.scroll-indicator {
-  position: absolute;
-  bottom: var(--space-8);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
-  color: var(--color-text-muted);
-  font-size: var(--font-size-xs);
-  animation: fade-up 0.8s ease-out 0.8s both;
-  z-index: 2; /* Acima do background (z-index: 0) e conteúdo (sem z-index) */
-  pointer-events: none; /* Permitir cliques através do elemento */
-}
-
-.mouse {
-  width: 24px;
-  height: 36px;
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  position: relative;
-}
-
-.wheel {
-  width: 3px;
-  height: 8px;
-  background: var(--color-primary);
-  border-radius: var(--radius-full);
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: scroll-down 2s infinite;
-}
-
-@keyframes scroll-down {
-  0%, 100% {
-    transform: translate(-50%, 0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, 12px);
-    opacity: 0;
-  }
 }
 
 /* Section Header */
