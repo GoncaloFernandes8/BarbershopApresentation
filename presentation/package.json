@@ -1,6 +1,8 @@
 {
   "name": "presentation",
   "version": "0.0.0",
+  "author": "Gonçalo Fernandes",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
